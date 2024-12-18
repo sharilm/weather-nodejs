@@ -1,3 +1,4 @@
+require('dotenv').config();
 const http = require('https');
 
 const options = {
@@ -6,8 +7,8 @@ const options = {
 	port: null,
 	path: '/city/landon/EN',
 	headers: {
-		'x-rapidapi-key': '9055396c6bmsh40bb01489964ae8p19ef9ajsnbc77a619d9c6',
-		'x-rapidapi-host': 'open-weather13.p.rapidapi.com'
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+        'x-rapidapi-host': process.env.RAPIDAPI_HOST
 	}
 };
 
